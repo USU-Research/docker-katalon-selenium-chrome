@@ -18,6 +18,7 @@ RUN mkdir -p /katalon
 WORKDIR /katalon
 
 COPY katalon_studio_linux_64 /katalon
+RUN chmod +x /katalon/configuration/resources/drivers/chromedriver_linux64/chromedriver /katalon/configuration/resources/drivers/firefox_linux64/geckodriver
 
 RUN ln -s /katalon/katalon /usr/bin/katalon && chown seluser /usr/bin/katalon
 
