@@ -4,7 +4,7 @@ USER root
 
 # install xvfb
 RUN apt-get update && \
-    apt-get install -y xvfb && \
+    apt-get install -y xvfb git && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean
 
