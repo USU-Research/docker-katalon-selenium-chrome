@@ -1,0 +1,7 @@
+/bin/
+/Libs/
+/.settings/
+/.classpath
+.svn/
+/katalon_studio_linux_64/jre
+.DS_Store
