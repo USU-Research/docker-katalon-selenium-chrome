@@ -19,12 +19,12 @@ WORKDIR /katalon
 
 COPY katalon_studio_linux_64 /katalon
 
-RUN ln -s /katalon/katalon /usr/bin/katalon
+RUN ln -s /katalon/katalon /usr/bin/katalon && chown seluser /usr/bin/katalon
 
 COPY start_xvfb.sh /start_xvfb.sh
 RUN chmod +x /start_xvfb.sh
 
-RUN chown -R seluser /katalon
+RUN chown -R seluser /katalon && chmod o+x /katalon/katalon
 
 USER seluser
 
